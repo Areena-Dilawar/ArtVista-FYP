@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import AV from '../assets/Images/AV1.png';
-import { IconButton, Drawer, List, ListItem, ListItemText, Box, Menu, MenuItem } from '@mui/material';
+import { IconButton, Drawer, List, ListItem, ListItemText, Menu, MenuItem } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import LoginIcon from '@mui/icons-material/Login';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null); // For Account Menu
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  // More sensitive scroll detection
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setScrolled(true);
@@ -22,11 +23,11 @@ const Navbar = () => {
   };
 
   const handleAccountClick = (event) => {
-    setAnchorEl(event.currentTarget); // Open menu
+    setAnchorEl(event.currentTarget);
   };
 
   const handleAccountClose = () => {
-    setAnchorEl(null); // Close menu
+    setAnchorEl(null);
   };
 
   const handleHamburgerClick = () => {
@@ -39,38 +40,14 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    
-    // Check initial scroll position when component mounts
-    handleScroll();
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Create explicit style objects to ensure proper application
-  const navbarStyle = {
-    position: 'fixed',
-    top: 0,
-    width: '100%',
-    zIndex: 50,
-    transition: 'all 0.5s ease-in-out',
-    backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.7)' : 'black',
-    backdropFilter: scrolled ? 'blur(12px)' : 'none',
-    boxShadow: scrolled ? '0 4px 6px -1px rgba(0, 0, 0, 0.1)' : 'none',
-    color: scrolled ? 'black' : 'white',
-  };
-
-  const iconStyle = {
-    color: scrolled ? 'black' : 'white',
-    transition: 'color 0.3s ease'
-  };
-
-  // Console log to debug scroll state
-  console.log('Scrolled state:', scrolled);
-
   return (
-    <div style={navbarStyle}>
+    <div className={`fixed top-0 w-full z-50 ${
+      scrolled ? 'bg-white/70 backdrop-blur-md shadow-md' : 'bg-black'
+    } transition-all duration-300`}>
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
-
         {/* Logo */}
         <div className="flex items-center">
           <img src={AV} alt="Logo" className="w-12 h-12" />
@@ -78,40 +55,29 @@ const Navbar = () => {
 
         {/* Search Bar */}
         <div className="flex-grow flex justify-center">
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            borderRadius: '0.5rem',
-            padding: '0.5rem 1rem',
-            width: '100%',
-            maxWidth: '480px',
-            backgroundColor: scrolled ? 'rgba(229, 231, 235, 0.8)' : 'rgb(243, 244, 246)'
-          }}>
-            <SearchIcon style={{ color: scrolled ? '#374151' : '#6B7280' }} />
+          <div className="flex items-center bg-gray-100 rounded-lg px-4 py-2 w-120">
+            <SearchIcon className="text-gray-500" />
             <input
               type="text"
               placeholder="Search products..."
-              style={{
-                marginLeft: '0.5rem',
-                width: '100%',
-                background: 'transparent',
-                outline: 'none',
-                color: scrolled ? 'black' : 'black'
-              }}
+              className="ml-2 w-full bg-transparent outline-none"
             />
           </div>
         </div>
 
         {/* Icons */}
         <div className="flex items-center space-x-4">
+
+          {/* Shopping Cart Icon */}
           <IconButton aria-label="Cart">
-            <ShoppingCartIcon sx={{ fontSize: 30, ...iconStyle }} />
+            <ShoppingCartIcon sx={{ fontSize: 30, color: scrolled ? 'black' : 'white' }} />
           </IconButton>
 
-          {/* Account Icon with MUI Menu */}
+          {/* Account Icon with Menu */}
           <IconButton aria-label="Account" onClick={handleAccountClick}>
-            <AccountCircleIcon sx={{ fontSize: 30, ...iconStyle }} />
+            <AccountCircleIcon sx={{ fontSize: 30, color: scrolled ? 'black' : 'white' }} />
           </IconButton>
+          
           <Menu
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
@@ -124,26 +90,20 @@ const Navbar = () => {
               vertical: 'top',
               horizontal: 'right',
             }}
-            PaperProps={{
-              sx: {
-                mt: 1.5,
-                backgroundColor: scrolled ? 'white' : 'black',
-                color: scrolled ? 'black' : 'white',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-                '& .MuiMenuItem-root:hover': {
-                  backgroundColor: scrolled ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.1)',
-                },
-                borderRadius: '8px'
-              }
-            }}
           >
-            <MenuItem onClick={handleAccountClose}>Login</MenuItem>
-            <MenuItem onClick={handleAccountClose}>Sign Up</MenuItem>
+            <MenuItem onClick={handleAccountClose}>
+              <LoginIcon sx={{ mr: 1, fontSize: 20 }} />
+              Login
+            </MenuItem>
+            <MenuItem onClick={handleAccountClose}>
+              <PersonAddIcon sx={{ mr: 1, fontSize: 20 }} />
+              Sign Up
+            </MenuItem>
           </Menu>
 
-          {/* Hamburger Icon */}
+          {/* Hamburger Menu Icon */}
           <IconButton aria-label="Menu" onClick={handleHamburgerClick}>
-            <MenuIcon sx={{ fontSize: 30, ...iconStyle }} />
+            <MenuIcon sx={{ fontSize: 30, color: scrolled ? 'black' : 'white' }} />
           </IconButton>
         </div>
       </div>
@@ -185,6 +145,7 @@ const Navbar = () => {
               />
             </ListItem>
           ))}
+          
         </List>
       </Drawer>
     </div>
