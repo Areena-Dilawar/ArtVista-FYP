@@ -1,0 +1,12 @@
+/* hideScrollbar.css */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
