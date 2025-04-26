@@ -1,38 +1,32 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useNavigate } from 'react-router-dom';
 
-function ParallaxCard({ videoSrc, title, index }) {
+function ParallaxCard({ videoSrc, title, category, index }) {
+  const navigate = useNavigate();
   const cardRef = useRef(null);
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false
   });
-  
+
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"]
   });
 
-  const y = useTransform(
-    scrollYProgress, 
-    [0, 1], 
-    [100, -100]
-  );
-  
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [0.95, 1.05, 0.95]
-  );
-  
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0.7, 1, 1, 0.7]
-  );
+  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1.05, 0.95]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.7, 1, 1, 0.7]);
 
   const entryDelay = index * 0.15;
+
+  const handleExplore = () => {
+    navigate(`/${category.toLowerCase()}`); // Now navigate using category, not title
+  };
+
+  
   
   return (
     <div 
@@ -93,6 +87,7 @@ function ParallaxCard({ videoSrc, title, index }) {
           />
           
           <motion.button
+            onClick={handleExplore}
             whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.2)" }}
             className="mt-6 px-6 py-2 border border-white/80 rounded-full text-white text-sm tracking-wider hover:bg-white/10 transition-colors"
           >
