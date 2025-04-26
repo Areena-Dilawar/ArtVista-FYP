@@ -80,8 +80,6 @@ function TopRatedArtist() {
                     delay: 1
                 }}
             ></motion.div>
-            
-            {/* Section title with animated underline - matching Cards component style */}
             <div className="text-center mb-12 relative z-10">
                 <motion.h2 
                     className="text-5xl font-serif font-bold tracking-wider"
