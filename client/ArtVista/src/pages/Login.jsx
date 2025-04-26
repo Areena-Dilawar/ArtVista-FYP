@@ -4,7 +4,6 @@ import '../Styles/Blobs.css'; // Import the blob animation styles
 function Login() {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Blobs Background */}
       <div className="absolute inset-0 z-0">
         <div className="blob top-0 left-0 bg-purple-500"></div>
         <div className="blob bottom-0 right-0 bg-pink-500"></div>
