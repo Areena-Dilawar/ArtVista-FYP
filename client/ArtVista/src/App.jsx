@@ -6,7 +6,8 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
-import '../src/Styles/HideScrollbar.css';
+import CategoryPage from './pages/CategoryPage'
+import '../src/Styles/HideScrollbar.css'
 function App() {
 
   return (
@@ -18,6 +19,11 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/pottery' element={<CategoryPage/>}/>
+          <Route path='/sculpture' element={<CategoryPage/>}/>
+          <Route path='/painting' element={<CategoryPage/>}/>
+          <Route path='/video&animation' element={<CategoryPage/>}/>
+          <Route path='/architecture' element={<CategoryPage/>}/>
           {/* Add more routes as needed */}
         </Routes>
       </div>
