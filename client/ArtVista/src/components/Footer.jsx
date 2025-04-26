@@ -1,77 +1,98 @@
-import React from "react";
-import { Box, Typography, Grid, IconButton, TextField, Button } from "@mui/material";
-import { Facebook, Twitter, Instagram, LinkedIn, Email, CreditCard, LocalAtm } from "@mui/icons-material";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: "black", color: "white", py: 4, px: 3 }}>
-      <Grid container spacing={3} justifyContent="center">
-        {/* Brand & Copyright */}
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" fontWeight="bold">ArtVista</Typography>
-          <Typography variant="body2">Your Hub for Artistic Exploration & Sales</Typography>
-          <Typography variant="body2" sx={{ mt: 1 }}>© 2025 ArtVista. All Rights Reserved.</Typography>
-        </Grid>
-
-        {/* Quick Links */}
-        <Grid item xs={12} sm={2}>
-          <Typography variant="h6">Quick Links</Typography>
-          <Typography variant="body2">Home</Typography>
-          <Typography variant="body2">About</Typography>
-          <Typography variant="body2">Categories</Typography>
-          <Typography variant="body2">Contact</Typography>
-        </Grid>
-
-        {/* Customer Support */}
-        <Grid item xs={12} sm={2}>
-          <Typography variant="h6">Support</Typography>
-          <Typography variant="body2">FAQs</Typography>
-          <Typography variant="body2">Return Policy</Typography>
-          <Typography variant="body2">Privacy Policy</Typography>
-          <Typography variant="body2">Terms & Conditions</Typography>
-        </Grid>
-
-        {/* Social Media */}
-        <Grid item xs={12} sm={2}>
-          <Typography variant="h6">Follow Us</Typography>
-          <Box mt={1}>
-            <IconButton sx={{ color: "white" }}><Facebook /></IconButton>
-            <IconButton sx={{ color: "white" }}><Twitter /></IconButton>
-            <IconButton sx={{ color: "white" }}><Instagram /></IconButton>
-            <IconButton sx={{ color: "white" }}><LinkedIn /></IconButton>
-          </Box>
-        </Grid>
-
-        {/* Newsletter Signup */}
-        <Grid item xs={12} sm={3}>
-          <Typography variant="h6">Newsletter</Typography>
-          <Box display="flex" gap={1} mt={1}>
-            <TextField 
-              variant="outlined" 
-              size="small" 
-              placeholder="Your Email" 
-              sx={{ bgcolor: "white", borderRadius: 1, flexGrow: 1 }}
-            />
-            <Button variant="contained" color="primary">
-              <Email />
-            </Button>
-          </Box>
-        </Grid>
-
-        {/* Payment Methods */}
-        <Grid item xs={12} sm={3} textAlign="center" mt={2}>
-          <Typography variant="h6">Payment Methods</Typography>
-          <Box mt={1} display="flex" justifyContent="center" gap={2}>
-            <IconButton sx={{ color: "white" }}>
-              <LocalAtm /> {/* Cash on Delivery Icon */}
-            </IconButton>
-          </Box>
-          <Typography variant="body2" sx={{ mt: 1 }}>
-            We accept Cash on Delivery 
-          </Typography>
-        </Grid>
-      </Grid>
-    </Box>
+    <footer className="py-16 px-4 sm:px-6 lg:px-8 bg-black/80 backdrop-blur-sm border-t border-white/10">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+          <div className="lg:col-span-2">
+            <h3 className="text-2xl font-serif font-bold text-white mb-4">ARTVISTA</h3>
+            <p className="text-white/70 mb-6 max-w-md">
+              A curated marketplace showcasing exceptional art pieces from around the world. 
+              Connecting artists with collectors since 2010.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                <LinkedIn className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-montserrat font-medium text-sm tracking-wider uppercase mb-4">Categories</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/category/pottery">
+                  <span className="text-white/70 hover:text-white transition-colors cursor-pointer">Pottery</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/sculpture">
+                  <span className="text-white/70 hover:text-white transition-colors cursor-pointer">Sculpture</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/painting">
+                  <span className="text-white/70 hover:text-white transition-colors cursor-pointer">Painting</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/animation">
+                  <span className="text-white/70 hover:text-white transition-colors cursor-pointer">Video & Animation</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/architecture">
+                  <span className="text-white/70 hover:text-white transition-colors cursor-pointer">Architecture</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-montserrat font-medium text-sm tracking-wider uppercase mb-4">Information</h4>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Artist Partnerships</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Exhibitions</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-montserrat font-medium text-sm tracking-wider uppercase mb-4">Customer Service</h4>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Shipping & Returns</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Care Instructions</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Track Order</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-white/50 text-sm mb-4 md:mb-0">© {new Date().getFullYear()} ARTVISTA. All rights reserved.</p>
+          <div className="flex items-center space-x-4">
+            <a href="#" className="text-white/50 text-sm hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="text-white/50 text-sm hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="text-white/50 text-sm hover:text-white transition-colors">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
