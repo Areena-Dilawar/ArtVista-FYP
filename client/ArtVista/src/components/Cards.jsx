@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ParallaxCard from './ParallaxCard';
+import ParallaxCard from './ParallaxCard.jsx';
 
 function Cards() {
   const categories = [
@@ -28,10 +28,11 @@ function Cards() {
   }, []);
 
   return (
-    <div className='bg-black text-white min-h-screen relative overflow-hidden py-20 '>
+    <div className='bg-black text-white min-h-screen relative overflow-hidden py-20'>
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black opacity-50"></div>
       
       <div className='relative z-10'>
-        <div className='categories-header text-center space-y-4  mt-20'>
+        <div className='categories-header text-center space-y-4 mb-16'>
           <h2 className='text-white text-5xl font-serif tracking-wider'>
             OUR CATEGORIES
           </h2>
