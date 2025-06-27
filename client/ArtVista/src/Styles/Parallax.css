@@ -1,0 +1,8 @@
+.parallax-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.parallax-card:hover {
+  transform: scale(1.05) rotateX(2deg) rotateY(-2deg);
+}
