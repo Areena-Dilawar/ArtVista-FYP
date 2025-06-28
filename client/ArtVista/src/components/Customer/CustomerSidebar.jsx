@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  ShoppingBag, Heart, ShoppingCart, User, Settings, Home, Calendar
+  ShoppingBag, Heart, ShoppingCart, User, Home, Calendar
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ const CustomerSidebar = ({ activeTab, setActiveTab }) => {
     { id: 'wishlist', label: 'Wishlist', icon: <Heart size={18} /> },
     { id: 'cart', label: 'Cart', icon: <ShoppingCart size={18} /> }, // ✅ Replaced "Purchased Art" with "Cart"
     { id: 'profile', label: 'My Profile', icon: <User size={18} /> },
-    { id: 'settings', label: 'Settings', icon: <Settings size={18} /> },
+    // { id: 'settings', label: 'Settings', icon: <Settings size={18} /> },
   ];
 
   return (

@@ -25,7 +25,7 @@ const CustomerDashboard = () => {
           {activeTab === 'wishlist' && <WishlistTab />}
           {activeTab === 'cart' && <CartTab />}
           {activeTab === 'profile' && <ProfileTab />}
-          {activeTab === 'settings' && <div className="flex justify-center items-center h-96">Settings content is under development</div>}
+          {/* {activeTab === 'settings' && <div className="flex justify-center items-center h-96">Settings content is under development</div>} */}
         </div>
       </div>
     </div>

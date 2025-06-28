@@ -12,7 +12,7 @@ const ArtistSidebar = ({ activeTab, setActiveTab }) => {
     { id: 'my-artwork', label: 'My Art', icon: <Image size={20} /> },
     // { id: 'artworks', label: 'My Artworks', icon: <Image size={20} /> },
     { id: 'upload', label: 'Upload Artwork', icon: <Upload size={20} /> },
-    { id: 'earnings', label: 'Earnings', icon: <DollarSign size={20} /> },
+    // { id: 'earnings', label: 'Earnings', icon: <DollarSign size={20} /> },
     // { id: 'analytics', label: 'Analytics', icon: <TrendingUp size={20} /> },
     { id: 'settings', label: 'Settings', icon: <Settings size={20} /> },
   ];

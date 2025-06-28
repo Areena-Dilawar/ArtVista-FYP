@@ -196,7 +196,7 @@ console.log("user",user)
       </motion.div>
 
       {/* Upcoming Events */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-gray-800 rounded-lg p-6 shadow-lg">
+      {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-gray-800 rounded-lg p-6 shadow-lg">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Upcoming Events</h2>
           <button onClick={() => window.location.href = '/events'} className="text-blue-400 text-sm flex items-center">
@@ -219,10 +219,10 @@ console.log("user",user)
             </div>
           )}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Recommendations */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-gray-800 rounded-lg p-6 shadow-lg">
+      {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-gray-800 rounded-lg p-6 shadow-lg">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Recommended For You</h2>
           <button onClick={() => window.location.href = '/category/Painting'} className="text-blue-400 text-sm flex items-center">
@@ -246,7 +246,7 @@ console.log("user",user)
             </div>
           )}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Offer */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg p-6 shadow-lg">

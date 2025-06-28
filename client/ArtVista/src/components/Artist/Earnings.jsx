@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-function Earnings() {
-  return (
-    <div>
+// function Earnings() {
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Earnings
+// export default Earnings

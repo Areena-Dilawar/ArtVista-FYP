@@ -7,25 +7,25 @@ import { Palette, Users, Globe, Award } from 'lucide-react';
 function AboutContent() {
   const teamMembers = [
     {
-      name: 'Emma Thompson',
+      name: 'Areena Dilawar',
       role: 'Founder & Creative Director',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       bio: 'Emma founded ARTVISTA with a vision to create a global community for artists and art enthusiasts to connect, collaborate, and celebrate creativity.'
     },
     {
-      name: 'David Chen',
+      name: 'Ali Hassan',
       role: 'Chief Technology Officer',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       bio: 'With over 15 years of experience in technology, David leads our engineering team to build innovative digital solutions for the art community.'
     },
     {
-      name: 'Sophia Rodriguez',
+      name: 'Alishba Iftikhar',
       role: 'Head of Artist Relations',
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       bio: 'As a former gallery curator, Sophia brings her expertise in artist representation and exhibition planning to support our growing artist community.'
     },
     {
-      name: 'Michael Johnson',
+      name: 'Absham Amir',
       role: 'Marketing Director',
       image: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       bio: 'Michael`s strategic approach to marketing has helped ARTVISTA reach art enthusiasts worldwide and build a recognizable brand in the art industry.'

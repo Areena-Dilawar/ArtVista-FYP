@@ -70,7 +70,7 @@ const UsersManagement = () => {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Email</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Role</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Status</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th>
+              {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th> */}
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-600">
@@ -91,10 +91,10 @@ const UsersManagement = () => {
                     {user.status || 'active'}
                   </span>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                {/* <td className="px-6 py-4 whitespace-nowrap">
                   <button className="text-blue-400 hover:text-blue-300 mr-3">Edit</button>
                   <button className="text-red-400 hover:text-red-300">Delete</button>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

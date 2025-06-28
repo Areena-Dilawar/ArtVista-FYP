@@ -8,9 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import apiService from '../Api/apiService';
 
 const artCategories = [
-  'Painting', 'Sculpture', 'Digital Art', 'Photography',
-  'Printmaking', 'Ceramics', 'Textiles', 'Mixed Media',
-  'Installation', 'Performance', 'Video & Animation', 'Other'
+  'Painting', 'Sculpture',  'Photography','Video & Animation', 'Pottery'
 ];
 
 function BecomeSeller() {

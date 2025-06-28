@@ -6,7 +6,7 @@ import ArtistSidebar from '../components/Artist/ArtistSidebar';
 import OverviewTab from '../components/Artist/OverviewTab';
 import MyArtworkTab from '../components/Artist/MyArtworkTab'
 import UploadTab from '../components/Artist/UploadTab';
-import Earnings from '../components/Artist/Earnings';
+// import Earnings from '../components/Artist/Earnings';
 import Analytics from '../components/Artist/Analytics';
 import Settings from '../components/Artist/Settings';
 const ArtistDashboard = () => {
@@ -27,9 +27,9 @@ const ArtistDashboard = () => {
           {activeTab === 'overview' && <OverviewTab activeTab={activeTab} setActiveTab={setActiveTab}/>}
           {activeTab === 'my-artwork' && <MyArtworkTab />}
           {activeTab === 'upload' && <UploadTab />}
-          {activeTab === 'earnings' && (
+          {/* {activeTab === 'earnings' && (
             <div className="flex justify-center items-center h-96"><Earnings/></div>
-          )}
+          )} */}
           {activeTab === 'analytics' && (
             <div className="flex justify-center items-center h-96"><Analytics/> </div>
           )}

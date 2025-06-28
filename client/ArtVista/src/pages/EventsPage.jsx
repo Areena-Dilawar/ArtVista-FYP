@@ -284,9 +284,9 @@ function EventsPage() {
                   
                   <p className="text-gray-300 text-sm line-clamp-2">{event.description}</p>
                   
-                  <button className="mt-4 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm transition-colors">
+                  {/* <button className="mt-4 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full text-sm transition-colors">
                     View Gallery
-                  </button>
+                  </button> */}
                 </div>
               </motion.div>
             ))}

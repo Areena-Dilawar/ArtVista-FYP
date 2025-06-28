@@ -190,8 +190,8 @@ const Navbar = () => {
                 <MenuItem key="email" disabled>{user.email}</MenuItem>,
                 <Divider key="divider" />,
                 <MenuItem key="dashboard" onClick={handleDashboard}>Dashboard</MenuItem>,
-                <MenuItem key="profile" onClick={() => { handleAccountClose(); navigate('/profile'); }}>Manage Profile</MenuItem>,
-                <MenuItem key="settings" onClick={() => { handleAccountClose(); navigate('/settings'); }}>Settings</MenuItem>,
+                // <MenuItem key="profile" onClick={() => { handleAccountClose(); navigate('/profile'); }}>Manage Profile</MenuItem>,
+                // <MenuItem key="settings" onClick={() => { handleAccountClose(); navigate('/settings'); }}>Settings</MenuItem>,
                 <MenuItem key="logout" onClick={handleLogout}>Logout</MenuItem>,
               ]
               : [

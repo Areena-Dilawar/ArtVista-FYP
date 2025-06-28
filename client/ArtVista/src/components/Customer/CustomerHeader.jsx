@@ -42,7 +42,7 @@ const CustomerHeader = ({ user }) => {
           
           <div className="flex items-center">
             <Avatar 
-              src={user?.avatar || "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg"} 
+              src={user?.avatar} 
               alt={user?.name || 'Customer'}
               className="cursor-pointer"
               onClick={handleMenuClick}
@@ -56,7 +56,7 @@ const CustomerHeader = ({ user }) => {
                 handleMenuClose();
                 navigate('/become-seller');
               }}>Become a Seller</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Settings</MenuItem>
+              {/* <MenuItem onClick={handleMenuClose}>Settings</MenuItem> */}
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>
           </div>
