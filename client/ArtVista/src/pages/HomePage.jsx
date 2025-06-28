@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import WelcomeText from '../components/WelcomeText';
 import Cards from '../components/Cards';
 import FeaturedArtworks from '../components/FeaturedArtworks';
-import TopRatedArtist from '../components/TopRatedArtist';
+// import TopRatedArtist from '../components/TopRatedArtist';
 import Footer from '../components/Footer';
 
 
@@ -14,7 +14,7 @@ function HomePage() {
       <WelcomeText title='ARTVISTA' subtitle='WHERE CREATIVITY MEETS CONNECTION' />
       <Cards />
       <FeaturedArtworks />
-      <TopRatedArtist />
+      {/* <TopRatedArtist /> */}
       <Footer />
     </div>
   );
