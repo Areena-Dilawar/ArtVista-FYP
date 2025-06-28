@@ -26,7 +26,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import AdminDashboard from './pages/AdminDashboard';
 import ArtistDashboard from './pages/ArtistDashboard';
 import CustomerDashboard from './pages/CustomerDashboard';
-// import './Styles/HideScrollBar.css';
+import './Styles/HideScrollBar.css';
 import OrderConfirmation from './pages/OrderConfirmation'; 
 
 
